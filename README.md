@@ -10,8 +10,24 @@ I need:
 * GitHub account
 
 ```
-ssh -v -i testing-deployment.pem ec2-user@<INSTANCE_IP>
+ssh -v -i testing-deployment.pem ec2-user@52.91.93.224
 ```
+
+### How to do this?
+
+This is not entirely a linear process so the linearity of this document might confuse you. I am sorry about that so here you go, you can do this whole thing in a couple of ways.
+
+#### 1. You have nothing.
+
+You can follow the AWS CodeDeploy tutorial which creates your instances and repo about a half way through. That means you can jump to [Now what???](#now-what).
+
+#### 2. You have clean instances
+
+Then start right here and just skip the Apache stuff if you don't need that. You probably do need to [install CodeDeploy Agent as mentioned in it's section](#codedeploy-agent).
+
+#### 3. You have instances with some stuff on them (probably Apache)
+
+In that case you can jump to [Now what???](#now-what) and freak out.
 
 ## Real work
 
@@ -21,10 +37,8 @@ Apache or Nginx?
 
 There's [a tutorial](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/install-LAMP.html) so might go with Apache. No need for MySQL, so will try to omit that.
 
-Note: 
-
-* Yes, my first instance is that Amazon Linux thingie.
-* I ended up doing only Amazon Linux so far. Didn't get to Ubuntu, though it should work (apart from CodeDeploy agent) similarly.
+Note: Yes, my first instance is that Amazon Linux thingie.
+Note: I ended up doing only Amazon Linux so far. Didn't get to Ubuntu, though it should work (apart from CodeDeploy agent) similarly.
 
 1. Add security rules to allow 80 and 443
 2. Connect to your instance and follow the steps to update, install Apache and start it
@@ -106,7 +120,7 @@ Don't miss any of these.
 
 * [IAM User + Inline Policy](http://docs.aws.amazon.com/codedeploy/latest/userguide/getting-started-setup.html)
 * [Service Role](http://docs.aws.amazon.com/codedeploy/latest/userguide/how-to-create-service-role.html)
-	* Note the value of ARN (e.g. arn:aws:iam::809827708923:role/CodeDeployDemo)
+	* Note the value of ARN (e.g. arn:aws:iam::8098208923:role/CodeDeployDemo)
 * [IAM Instance Profile](http://docs.aws.amazon.com/codedeploy/latest/userguide/how-to-create-iam-instance-profile.html)
 * Instances ([using CloudFront](http://docs.aws.amazon.com/codedeploy/latest/userguide/how-to-use-cloud-formation-template.html#how-to-use-cloud-formation-template-console))
 * Apache (see above)
