@@ -77,6 +77,8 @@ Amazon Linux how-to:
 
 If you've used CloudFront to generate your instances, this is already done.
 
+Otherwise, if you don't have CodeDeploy Agent, you can try running these few commands on your Amazon Linux instances. If something crashes, go check out the tutorial somewhere on AWS docs.
+
 ```
 sudo yum info codedeploy-agent
 ```
@@ -92,9 +94,9 @@ sudo ./install auto
 
 ```
 
-### GitHub integration
+## GitHub integration
 
-[As outlined in this tutorial.](http://docs.aws.amazon.com/codedeploy/latest/userguide/github-integ-tutorial.html)
+[As outlined in this tutorial.](http://docs.aws.amazon.com/codedeploy/latest/userguide/github-integ-tutorial.html) We are going to do this now.
 
 ### Get a repo and push some stuff
 
@@ -110,13 +112,17 @@ files:
     destination: /var/www/html
 ```
 
+Okay, that's fine. You have stuff to deploy. We're still a long way from home. Lot's of AWS stuff needs to be done now. So this is where I freak out.
+
 ### Now what???
 
 [This f***ing document](http://docs.aws.amazon.com/codedeploy/latest/userguide/how-to-create-service-role.html) or 250 pages in PDF.
 
 **Steps:**
 
-Don't miss any of these.
+Unless you're a pro, you have to click those links and read that stuff for more detailed instructions.
+
+Don't miss any of these. 
 
 * [IAM User + Inline Policy](http://docs.aws.amazon.com/codedeploy/latest/userguide/getting-started-setup.html)
 * [Service Role](http://docs.aws.amazon.com/codedeploy/latest/userguide/how-to-create-service-role.html)
@@ -129,12 +135,16 @@ Don't miss any of these.
 
 **Final push:**
 
-* [Create application](http://docs.aws.amazon.com/codedeploy/latest/userguide/how-to-create-application.html)
-* Deployment group
-* Deploy from GitHub
+* [Create application](http://docs.aws.amazon.com/codedeploy/latest/userguide/how-to-create-application.html#how-to-create-application-console)
+* [Deployment group](http://docs.aws.amazon.com/codedeploy/latest/userguide/how-to-create-deployment-group.html#how-to-create-deployment-group-console)
+* [Deploy from GitHub](http://docs.aws.amazon.com/codedeploy/latest/userguide/how-to-deploy-revision.html#how-to-deploy-revision-console)
 * **Done!**
 
+Congratulations, buddy!
+
 ### Automatic deployment from GitHub
+
+*The holy grail.*
 
 **Next steps:**
 
