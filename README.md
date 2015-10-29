@@ -21,8 +21,10 @@ Apache or Nginx?
 
 There's [a tutorial](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/install-LAMP.html) so might go with Apache. No need for MySQL, so will try to omit that.
 
-Note: Yes, my first instance is that Amazon Linux thingie.
-Note: I ended up doing only Amazon Linux so far. Didn't get to Ubuntu, though it should work (apart from CodeDeploy agent) similarly.
+Note: 
+
+* Yes, my first instance is that Amazon Linux thingie.
+* I ended up doing only Amazon Linux so far. Didn't get to Ubuntu, though it should work (apart from CodeDeploy agent) similarly.
 
 1. Add security rules to allow 80 and 443
 2. Connect to your instance and follow the steps to update, install Apache and start it
