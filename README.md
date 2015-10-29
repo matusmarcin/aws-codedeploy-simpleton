@@ -10,7 +10,7 @@ I need:
 * GitHub account
 
 ```
-ssh -v -i testing-deployment.pem ec2-user@52.91.93.224
+ssh -v -i testing-deployment.pem ec2-user@<INSTANCE_IP>
 ```
 
 ## Real work
@@ -104,7 +104,7 @@ Don't miss any of these.
 
 * [IAM User + Inline Policy](http://docs.aws.amazon.com/codedeploy/latest/userguide/getting-started-setup.html)
 * [Service Role](http://docs.aws.amazon.com/codedeploy/latest/userguide/how-to-create-service-role.html)
-	* Note the value of ARN (e.g. arn:aws:iam::891972690103:role/CodeDeployDemo)
+	* Note the value of ARN (e.g. arn:aws:iam::809827708923:role/CodeDeployDemo)
 * [IAM Instance Profile](http://docs.aws.amazon.com/codedeploy/latest/userguide/how-to-create-iam-instance-profile.html)
 * Instances ([using CloudFront](http://docs.aws.amazon.com/codedeploy/latest/userguide/how-to-use-cloud-formation-template.html#how-to-use-cloud-formation-template-console))
 * Apache (see above)
