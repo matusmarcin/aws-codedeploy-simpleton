@@ -10,7 +10,7 @@ I need:
 * GitHub account
 
 ```
-ssh -v -i testing-deployment.pem ec2-user@52.91.93.224
+ssh -v -i testing-deployment.pem ec2-user@<INSTANCE_IP>
 ```
 
 ### How to do this?
