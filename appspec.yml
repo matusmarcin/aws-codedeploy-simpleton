@@ -3,3 +3,8 @@ os: linux
 files:
   - source: /
     destination: /var/www/html
+hooks:
+   BeforeInstall:
+     - location: scripts/beforeInstall.sh
+   AfterInstall:
+     - location: scripts/afterInstall.sh
